@@ -1,13 +1,13 @@
 {
-    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:919188484580:task-definition/sdp_poc_application_task:1",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-2:919188484580:task-definition/sdp-poc-application-task:1",
     "containerDefinitions": [
         {
-            "name": "sdp_poc_application",
-            "image": "919188484580.dkr.ecr.ap-northeast-2.amazonaws.com/sdp_poc",
+            "name": "sdp-poc-application-container",
+            "image": "919188484580.dkr.ecr.ap-northeast-2.amazonaws.com/sdp_poc:latest",
             "cpu": 0,
             "portMappings": [
                 {
-                    "name": "sdp_poc_application-8080-tcp",
+                    "name": "sdp-poc-application-container-8080-tcp",
                     "containerPort": 8080,
                     "hostPort": 8080,
                     "protocol": "tcp",
@@ -24,14 +24,14 @@
                 "logDriver": "awslogs",
                 "options": {
                     "awslogs-create-group": "true",
-                    "awslogs-group": "/ecs/sdp_poc_application_task",
+                    "awslogs-group": "/ecs/sdp-poc-application-task",
                     "awslogs-region": "ap-northeast-2",
                     "awslogs-stream-prefix": "ecs"
                 }
             }
         }
     ],
-    "family": "sdp_poc_application_task",
+    "family": "sdp-poc-application-task",
     "executionRoleArn": "arn:aws:iam::919188484580:role/ecsTaskExecutionRole",
     "networkMode": "awsvpc",
     "revision": 1,
@@ -77,7 +77,7 @@
         "cpuArchitecture": "X86_64",
         "operatingSystemFamily": "LINUX"
     },
-    "registeredAt": "2023-06-01T01:55:12.927Z",
+    "registeredAt": "2023-06-08T01:27:03.376Z",
     "registeredBy": "arn:aws:iam::919188484580:user/ktkang@tecace.com",
     "tags": []
 }

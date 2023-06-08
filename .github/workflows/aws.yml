@@ -38,11 +38,11 @@ env:
   # set this to your Amazon ECS service name           
   ECS_SERVICE: sdp-poc-application-service           
   # set this to your Amazon ECS cluster name
-  ECS_CLUSTER: sdp_poc                 
+  ECS_CLUSTER: sdp-poc-application-cluster
   # set this to the path to your Amazon ECS task definition file, e.g. .aws/task-definition.json
   ECS_TASK_DEFINITION: task-definition.json
   # set this to the name of the container in the containerDefinitions section of your task definition
-  CONTAINER_NAME: sdp_poc_application           
+  CONTAINER_NAME: sdp-poc-application-container
   # open id connect
   ROLE_ARN: arn:aws:iam::919188484580:role/sdp-poc-github-action-role
 
