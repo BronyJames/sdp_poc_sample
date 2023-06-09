@@ -1,11 +1,24 @@
-const express = require('express');
-const app = express();
-const port = 3000;
+const app = require("express")();
 
-app.get('/', (req, res) => {
-  res.send('Hello1, World!');
+app.get("/", (req, res) => {
+  res.json({
+    message: "Success",
+  });
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+app.get("/hello", (req, res) => {
+  res.json({
+    message: "hello",
+  });
+});
+
+// 테스트용
+app.get("/test", (req, res) => {
+  res.json({
+    message: "Test",
+  });
+});
+
+app.listen(3000, () => {
+  console.log("Server starting on port 80");
 });
